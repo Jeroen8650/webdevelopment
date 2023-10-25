@@ -1,0 +1,12 @@
+.link-met-icoon {
+    background-size: 16px 16px; /* Pas de afmetingen aan naar wens */
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 20px;
+    background-image: url("../../images/icoon.png")
+}
+
+
+.link-met-icoon:hover {
+    text-decoration: underline;
+}
