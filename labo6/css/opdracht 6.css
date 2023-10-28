@@ -1,0 +1,14 @@
+.checklist{
+    background-size: 16px 16px; /* Pas de afmetingen aan naar wens */
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 20px;
+    background-image: url("../../images/uncheck.png")
+}
+.checked{
+    background-size: 16px 16px; /* Pas de afmetingen aan naar wens */
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 20px;
+    background-image: url("../../images/check.png")
+}
