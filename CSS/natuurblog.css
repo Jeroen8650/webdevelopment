@@ -1,0 +1,31 @@
+html {
+    margin: auto;
+    width: 95%;
+}
+nav {
+    color: black;
+    background-color: dimgrey;
+    margin-bottom: 0.5em;
+}
+nav > a {
+    color: mediumspringgreen;
+}
+section > header {
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-size: 1450px;
+    height: 120px;
+    color: white;
+    font-size: 30px;
+}
+.blok {
+    background-color: lightgrey;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 0.5em;
+}
+article > header {
+    font-size: 25px;
+    text-decoration: underline;
+}
