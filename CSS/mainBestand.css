@@ -1,0 +1,42 @@
+/* Style for the entire body */
+body {
+    font-family: Arial, sans-serif; /* Set the font for the entire page */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f4f4f4; /* Set a background color for the body */
+    color: #333; /* Set default text color */
+}
+
+/* Style for sections */
+section {
+    margin: 20px; /* Add margin around sections */
+    padding: 20px; /* Add padding inside sections */
+    border: 1px solid #ddd; /* Add a border to sections */
+    background-color: #fff; /* Set a background color for sections */
+}
+
+/* Style for heading level 1 */
+h1 {
+    color: #333;
+    margin: 20px;
+}
+
+/* Style for heading level 3 */
+h3 {
+    color: #555; /* Text color for h3 */
+    border-bottom: 2px solid #ccc; /* Add a bottom border */
+    padding-bottom: 5px; /* Space between text and border */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Style for links */
+a {
+    color: #007bff; /* Link text color */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+/* Style for links on hover */
+a:hover {
+    text-decoration: underline; /* Underline links on hover */
+    color: #0056b3; /* Change link color on hover */
+}
