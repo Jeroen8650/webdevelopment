@@ -1,0 +1,42 @@
+.grijs {
+    background-color: grey;
+}
+
+.vrij {
+    background-color: lightpink;
+}
+table thead tr:first-child{
+    background-color: rgb(170,170,200);
+}
+table tbody tr:first-child{
+    color: rgb(200,190,240);
+    background-color: rgb(35,37,70);
+}
+
+table td:last-child, table td:first-child {
+    background-color: rgb(255, 220, 220);
+}
+
+/* Style for all table elements */
+table {
+    border-collapse: collapse; /* Collapse the borders and remove spacing between cells */
+}
+
+/* Style for table headers (th) */
+th {
+    border: 1px solid #ddd; /* Add a 1px solid border to th elements */
+    padding: 8px; /* Add padding to th elements */
+    text-align: center;
+}
+
+/* Style for table cells (td) */
+td {
+    border: 1px solid #ddd; /* Add a 1px solid border to td elements */
+    padding: 8px; /* Add padding to td elements */
+    text-align: left; /* Align text to the left in td elements */
+}
+
+/* Optional: Style for alternating rows (zebra striping) */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Set a background color for even rows */
+}
