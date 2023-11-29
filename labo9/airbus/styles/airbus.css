@@ -1,0 +1,123 @@
+body  {
+    margin: 0px auto;
+    padding: 0px;
+    width : 95%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#news {
+    float:right;
+    width: 25%;
+    box-sizing: border-box;
+    color:#666666;
+    border: 1px solid #999999;
+    background-color:#dddddd;
+    font-size: 90%;
+}
+
+#main {
+    float:left;
+    width: 75%;
+}
+
+#top {
+    height: 200px;
+    text-align: center;
+    background: url("../images/bgsky3.jpg") no-repeat;
+    background-size: cover;
+    position:relative; /* nodig om vliegtuig absoluut te positioneren tov dit element */
+    color : darkblue;
+}
+
+#top img {
+    position:absolute; /* vliegtuig absoluut positioneren tov dichtste non-static ancestor */
+    bottom:60px;
+    right: 250px;}
+
+
+#top h1 {
+    margin : 0px;
+    font-size:300%;
+    font-style:italic;
+    font-weight:bold;
+}
+
+#top p {
+    font-size:240%;
+    margin-top: 50px;
+    font-style:normal;
+    font-weight:bold;
+}
+
+
+#news h1 {
+    color: white;
+    background-color: blue;
+    font-size: 120%;
+    text-align:center;
+}
+
+#news p {
+    padding: 0px 10px;
+}
+
+
+.introduction {
+    margin-top: 20px;
+    margin-left: 20px;
+    background: url(../images/airbus_logo.jpg) no-repeat top left;
+    padding : 0px 30px 20px 170px;
+
+    font-size: 90%;
+    text-align:justify;
+}
+
+
+.introduction span {
+    font-style:italic;
+    color: blue;
+    font-weight:bold;
+}
+
+.gallery {
+    background-color: #999999;
+    padding : 10px 0px 10px 10px;
+}
+
+.foto {
+    display:inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px 10px;
+    background-color:white;
+    border: 1px dashed #999999;
+}
+
+
+.foto>img {
+    padding: 10px 0px 0px 10px;
+}
+
+.bottom {
+    clear : both;
+    background-color: #666666;
+    color:white;
+}
+
+.block {
+    display:inline-block;
+    margin-left: 120px;
+    margin-bottom:0px;
+    line-height: 2em;
+}
+.block a {
+    color: white;
+}
+.block a:hover {
+    color: red;
+}
+
+.copyright p{
+    text-align:center;
+}
