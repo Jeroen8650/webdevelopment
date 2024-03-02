@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demonstratie slider</title>
+    <script type="text/javascript" charset="utf-8" src="scripts/index.js"></script>
+    <link rel="stylesheet" href="styles/index.css"/>
+</head>
+<body>
+<div class="row">
+    <section>
+        <div>
+            <p id="rood">Red: 50</p>
+            <input type="range" class="slider" value="50" min="0" max="255" />
+
+        </div>
+        <div>
+            <p id="groen">Green: 50</p>
+            <input type="range" class="slider" value="50" min="0" max="255" />
+        </div>
+        <div>
+            <p id="blauw">Blue: 50</p>
+            <input type="range" class="slider" value="50" min="0" max="255" />
+        </div>
+    </section>
+    <section class="blokje">
+        <p>Een gekleurd blokje:</p>
+        <div class="colorDemo" />
+    </section>
+</div>
+</body>
+</html>

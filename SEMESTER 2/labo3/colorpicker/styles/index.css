@@ -1,0 +1,12 @@
+.colorDemo {
+    width:100px;
+    height:100px;
+    border:1px solid black;
+}
+.row {
+    display: flex;
+}
+.blokje {
+    margin-left: 20px;
+
+}
