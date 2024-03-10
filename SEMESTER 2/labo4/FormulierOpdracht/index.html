@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Title</title>
+</head>
+<body>
+<form action="formulierElementen.html" method="post">
+    <label for="voornaam">First name*:</label>
+    <input type="text" id="voornaam" required="required" placeholder="Your first name">
+    <br>
+    <label for="achternaam">Last name*:</label>
+    <input type="text" id="achternaam" required="required" placeholder="Your last name">
+    <br>
+    <label>Which sport do you train?</label>
+    <br>
+    <label for="Running">Running</label>
+    <input type="checkbox" id="Running" value="lopen">
+    <br>
+    <label for="Swimming">Swimming</label>
+    <input type="checkbox" id="Swimming" value="zwemmen">
+    <br>
+    <label for="Rowing">Rowing</label>
+    <input type="checkbox" id="Rowing" value="roeien">
+    <br>
+    <label>What is your gender?</label>
+    <br>
+    <label for="Male">Male</label>
+    <input type="radio" id="Male">
+    <br>
+    <label for="Female">Female</label>
+    <input type="radio" id="Female">
+    <br>
+    <label for="movie">Favorite movie:</label>
+    <input type="text" id="movie">
+    <br>
+    <label for="quote">Favorite quote:</label>
+    <input type="text" id="quote" placeholder="Write your favorite quote!">
+    <br>
+    <label for="food">Favorite food</label>
+    <select id="food">
+        <option value="Hamburger">Hamburger</option>
+        <option value="Spaghetti">Spaghetti</option>
+        <option value="Macaroni">Macaroni</option>
+        <option value="Lasagna">Lasagna</option>
+    </select>
+    <br>
+    <input type="file" id="file" name="bestand"/>
+    <br>
+    <label  for="mail">Email adress:</label>
+    <input type="email" id="mail" name="email" placeholder="Enter your email adress">
+    <br>
+    <label  for="site">Favorite site:</label>
+    <input type="url" id="site" name="site" placeholder="Enter the URL of your favorite website">
+    <br>
+    <label for="nummer">Favorite number between 1-10:</label>
+    <input type="number" id="nummer" min="1" max="10" contenteditable="false">
+    <br>
+    <label for="nummer2">Favorite number between 11-1000:</label>
+    <input type="range" id="nummer2" name="nummer" min="11" max="1000"/>
+</form>
+<script type="text/javascript" charset="utf-8" src="scripts/index.js"></script>
+</body>
+</html>
