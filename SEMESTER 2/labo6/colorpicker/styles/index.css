@@ -1,0 +1,18 @@
+
+section{
+    border: lightgrey solid 5px;
+    width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.inline{
+    display: inline-block;
+}
+
+.colorDemo {
+    display: inline-block;
+    width:100px;
+    height:100px;
+    border:1px solid black;
+}
