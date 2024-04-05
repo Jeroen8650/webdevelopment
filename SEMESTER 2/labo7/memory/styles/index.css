@@ -1,12 +1,38 @@
+.memory-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+}
+
 .card {
     width: 100px;
     height: 100px;
-    background-color: #ccc;
-    margin: 5px;
-    display: inline-block;
+    background-color: #eee;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .card img {
     display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card.flipped .back {
+    display: block;
+}
+
+.card.flipped .front {
+    display: none;
+}
+
+.card.flipped {
+    border: 2px solid #ffcc00; /* Gele border */
 }

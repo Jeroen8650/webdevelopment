@@ -1,54 +1,68 @@
 // Globale variabelen
-let AANTAL_HORIZONTAAL = 4;
-let AANTAL_VERTICAAL = 3;
-let AANTAL_KAARTEN = 6;
-let isBusy = false; // Indicator om te voorkomen dat gebruiker tijdens wachttijd op kaarten klikt
+const AANTAL_HORIZONTAAL = 4;
+const AANTAL_VERTICAAL = 3;
+const AANTAL_KAARTEN = 6;
+const KAARTEN_ARRAY = ['kaart1.png', 'kaart2.png', 'kaart3.png', 'kaart4.png', 'kaart5.png', 'kaart6.png'];
 
-// Array met de namen van de afbeeldingen
-let afbeeldingen = ['kaart1.png', 'kaart2.png', 'kaart3.png', 'kaart4.png', 'kaart5.png', 'kaart6.png'];
+let flippedCards = [];
+let matchedCards = [];
 
-// Shuffle functie om de volgorde van kaarten willekeurig te maken
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
+// Functie om de kaarten op het scherm te zetten
+function createMemoryGrid() {
+    const memoryGrid = document.querySelector('.memory-grid');
 
-// Functie om het spelbord te maken
-function createGameBoard() {
-    const gameContainer = document.getElementById('game-container');
-    const shuffledImages = shuffle(afbeeldingen.concat(afbeeldingen)); // Elke kaart komt twee keer voor
-
-    for (let i = 0; i < shuffledImages.length; i++) {
+    for (let i = 0; i < AANTAL_VERTICAAL * AANTAL_HORIZONTAAL; i++) {
         const card = document.createElement('div');
         card.classList.add('card');
-        card.setAttribute('data-index', i); // Houdt de index bij van de afbeeldingen array
-        card.addEventListener('click', handleCardClick);
+        const cardFront = document.createElement('img');
+        cardFront.src = 'achterkant.png';
+        cardFront.classList.add('front');
+        const cardBack = document.createElement('img');
+        cardBack.src = KAARTEN_ARRAY[Math.floor(i / 2)];
+        cardBack.classList.add('back');
+        card.appendChild(cardFront);
+        card.appendChild(cardBack);
+        memoryGrid.appendChild(card);
 
-        const image = document.createElement('img');
-        image.src = 'achterkant.png';
-        card.appendChild(image);
-
-        gameContainer.appendChild(card);
+        card.addEventListener('click', function () {
+            flipCard(card);
+        });
     }
 }
 
-// Functie om te reageren op kaartklikken
-function handleCardClick(event) {
-    if (isBusy) return; // Als het spel bezig is met wachten, klikken negeren
+// Functie om een kaart om te draaien
+function flipCard(card) {
+    if (flippedCards.length < 2 && !card.classList.contains('flipped')) {
+        card.classList.add('flipped');
+        flippedCards.push(card);
 
-    const clickedCard = event.currentTarget;
-    const index = clickedCard.getAttribute('data-index');
-    const image = clickedCard.querySelector('img');
-
-    // Toon de afbeelding als deze niet al omgedraaid is
-    if (!clickedCard.classList.contains('flipped')) {
-        image.style.display = 'block';
-        clickedCard.classList.add('flipped');
+        if (flippedCards.length === 2) {
+            setTimeout(checkForMatch, 1000);
+        }
     }
 }
 
-// Start het spel
-createGameBoard();
+// Functie om te controleren of de omgedraaide kaarten overeenkomen
+function checkForMatch() {
+    const [firstCard, secondCard] = flippedCards;
+    if (firstCard.querySelector('.back').src === secondCard.querySelector('.back').src) {
+        matchedCards.push(firstCard, secondCard);
+        flippedCards = [];
+        if (matchedCards.length === AANTAL_KAARTEN * 2) {
+            endGame();
+        }
+    } else {
+        setTimeout(() => {
+            flippedCards.forEach(card => card.classList.remove('flipped'));
+            flippedCards = [];
+        }, 1000);
+    }
+}
+
+// Functie om het einde van het spel te tonen
+function endGame() {
+    alert('Gefeliciteerd! Je hebt alle kaarten gevonden!');
+}
+
+// Initialisatie
+createMemoryGrid();
