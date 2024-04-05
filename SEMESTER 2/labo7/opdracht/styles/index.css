@@ -1,0 +1,22 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 110px); /* Increased width to accommodate borders */
+    grid-template-rows: repeat(3, 110px); /* Added rows to accommodate borders */
+    grid-gap: 2px; /* Added gap for borders */
+}
+
+.grid-item {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: 1px solid black; /* Added border */
+}
+
+.grid-item.clicked {
+    background-color: black;
+}
+
+.border-grid {
+    border: 1px solid black;
+}
