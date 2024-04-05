@@ -1,4 +1,4 @@
-// Globale variabelen
+
 const AANTAL_HORIZONTAAL = 4;
 const AANTAL_VERTICAAL = 3;
 const AANTAL_KAARTEN = 6;
@@ -7,7 +7,6 @@ const KAARTEN_ARRAY = ['kaart1.png', 'kaart2.png', 'kaart3.png', 'kaart4.png', '
 let flippedCards = [];
 let matchedCards = [];
 
-// Functie om de kaarten op het scherm te zetten
 function createMemoryGrid() {
     const memoryGrid = document.querySelector('.memory-grid');
 
@@ -30,7 +29,6 @@ function createMemoryGrid() {
     }
 }
 
-// Functie om een kaart om te draaien
 function flipCard(card) {
     if (flippedCards.length < 2 && !card.classList.contains('flipped')) {
         card.classList.add('flipped');
@@ -42,7 +40,6 @@ function flipCard(card) {
     }
 }
 
-// Functie om te controleren of de omgedraaide kaarten overeenkomen
 function checkForMatch() {
     const [firstCard, secondCard] = flippedCards;
     if (firstCard.querySelector('.back').src === secondCard.querySelector('.back').src) {
@@ -59,7 +56,6 @@ function checkForMatch() {
     }
 }
 
-// Functie om het einde van het spel te tonen
 function endGame() {
     alert('Gefeliciteerd! Je hebt alle kaarten gevonden!');
 }
